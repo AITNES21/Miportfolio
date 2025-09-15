@@ -96,9 +96,12 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section - CORRECCIÓN APLICADA */
 .hero {
     min-height: 100vh;
+    padding-top: 140px;
+    /* 70px navbar + 70px espacio extra */
+    padding-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -645,7 +648,7 @@ section {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive Design */
+/* Responsive Design - CORRECCIONES APLICADAS */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -669,14 +672,26 @@ section {
         left: 0;
     }
 
+    /* CORRECCIÓN HERO MÓVIL */
+    .hero {
+        padding-top: 120px;
+        /* Reducido para móvil */
+        padding-bottom: 40px;
+        min-height: calc(100vh - 70px);
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 30px;
+        align-items: flex-start;
+        /* Cambiado de center a flex-start */
     }
 
     .hero-title {
         font-size: 2.5rem;
+        margin-top: 0;
+        /* Sin margen superior extra */
     }
 
     .hero-buttons {
@@ -721,6 +736,12 @@ section {
         padding: 0 15px;
     }
 
+    /* CORRECCIÓN MÓVILES PEQUEÑOS */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -728,3 +749,4 @@ section {
     .hero-description {
         font-size: 1rem;
     }
+}
